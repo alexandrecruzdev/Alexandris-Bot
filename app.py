@@ -35,6 +35,7 @@ if "conversation" not in st.session_state:
 # Campo de entrada do usuário
 with st.form("chat_form", clear_on_submit=True):
     user_input = st.text_input("Digite sua pergunta:")
+    user_input = user_input.lower()
     afirmacoes =  [
     "valido", "certifico", "ratifico", "reconheço", "comprovo", "autentico",
     "asseguro", "declaro", "estabeleço", "reforço", "corroboro","digo que sim", "dou certeza", "torno oficial", "declaro verdadeiro","afirmo","confirmo"]
