@@ -34,3 +34,4 @@ Essas palavras-chave são utilizadas pelo chatbot para identificar quando o usu�
 Se o usuário escrever:
 Eu **declaro verdadeiro** que meu nome é João e eu moro no Brasil.
 O chatbot identificará a palavra-chave "declaro verdadeiro" e armazenará a informação “Meu nome é João e eu moro no Brasil.” no banco de dados para futuras interações.
+https://alexandrisbot.streamlit.app/
