@@ -51,9 +51,11 @@ if submit_button and user_input:
     print(contexto)
     question = (
     f"Responda à pergunta do usuário: '{user_input}' de forma clara, direta e objetiva. "
-    f"Se o histórico da conversa ({st.session_state['conversation']}) contiver informações relevantes, utilize-o para enriquecer a resposta, mas evite repetir ou contradizer dados já mencionados. "
-    f"Se a pergunta não se relacionar ao histórico, forneça uma resposta precisa e informativa baseada em fatos. "
+    f"Utilize o banco de dados: {contexto} como base caso haja informação relevante sobre o assunto."
+    f"Se não houver informações sobre o assunto no banco utilize seus conhecimentos gerais para responder."
+    f"Se ajudar, use o historico da conversa: {st.session_state['conversation']} para contextualizar ou melhorar a resposta."
     f"Certifique-se de não incluir explicações sobre como chegou à resposta ou detalhes sobre o histórico."
+    
 )
     response = chatbot.get_response(question)
     
