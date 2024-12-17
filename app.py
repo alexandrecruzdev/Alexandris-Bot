@@ -50,10 +50,11 @@ if submit_button and user_input:
     contexto = pch.query(user_input,3)
     print(contexto)
     question = (
-    f"Responda à pergunta do usuário: '{user_input}' de forma clara, direta e objetiva. "
-    f"Utilize o banco de dados: {contexto} como base caso haja informação relevante sobre o assunto."
-    f"Se não houver informações sobre o assunto no banco utilize seus conhecimentos gerais para responder."
-    f"Se ajudar, use o historico da conversa: {st.session_state['conversation']} para contextualizar ou melhorar a resposta."
+    f"Se a entrada do usuário for uma pergunta, responda de forma clara, direta e objetiva: '{user_input}'. "
+    f"Utilize o banco de dados: {contexto} como base, caso haja informação relevante sobre o assunto. "
+    f"Se não houver informações sobre o assunto no banco, utilize seus conhecimentos gerais para responder. "
+    f"Se a entrada não for uma pergunta, forneça uma resposta relevante ou útil com base no contexto e histórico. "
+    f"Se ajudar, use o histórico da conversa: {st.session_state['conversation']} para contextualizar ou melhorar a resposta. "
     f"Certifique-se de não incluir explicações sobre como chegou à resposta ou detalhes sobre o histórico."
     
 )
