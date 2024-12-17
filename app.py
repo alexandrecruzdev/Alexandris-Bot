@@ -49,7 +49,12 @@ if submit_button and user_input:
     # Obter resposta do chatbot
     contexto = pch.query(user_input,3)
     print(contexto)
-    question = f"{user_input} responda com o auxilio do historico da nossa conversa:{st.session_state["conversation"]} e do nosso contexto:{contexto} mas não mencione-os na conversa."
+    question = (
+    f"Responda à pergunta do usuário: '{user_input}' de forma clara, direta e objetiva. "
+    f"Se o histórico da conversa ({st.session_state['conversation']}) contiver informações relevantes, utilize-o para enriquecer a resposta, mas evite repetir ou contradizer dados já mencionados. "
+    f"Se a pergunta não se relacionar ao histórico, forneça uma resposta precisa e informativa baseada em fatos. "
+    f"Certifique-se de não incluir explicações sobre como chegou à resposta ou detalhes sobre o histórico."
+)
     response = chatbot.get_response(question)
     
     # Atualizar histórico da conversa
